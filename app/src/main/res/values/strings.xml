@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Gamer Zone</string>
+    <string name="imgView">logogamer</string>
+    <string name="tvTitulo">ZONA GAMER</string>
+    <string name="tvBienvenida">Bienvenido !!!</string>
+    <string name="btnIngresar">INGRESAR</string>
+    <string name="tvMensaje">Tu rincón de juegos</string>
+    <string name="imgLogo1">logo</string>
+    <string name="tvBienvenida2">Bienvenido</string>
+    <string name="edtNombre">Nombre de Usuario o Correo</string>
+    <string name="edtPassword">Contraseña</string>
+    <string name="tvForgot">¿Olvidaste tu contraseña?</string>
+    <string name="btnLogin">INICIAR</string>
+    <string name="tvOr">O</string>
+    <string name="tvRegister">¿Aún no tienes cuenta? <font color="#1F8EF1"><b>Regístrate</b></font></string>
+    <string name="nav_inicio"><b>INICIO</b></string>
+    <string name="nav_juegos"><b>VER JUEGOS</b></string>
+    <string name="nav_categoria"><b>POR CATEGORIAS</b></string>
+    <string name="nav_nuevojuego"><b>AÑADIR JUEGO</b></string>
+    <string name="nav_close"><b>CERRAR SESIÓN</b></string>
+    <string name="logo">Logo</string>
+    <string name="appName">Gamer Zone</string>
+    <string name="imgTortuga">Tortuga</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="tvInicio">GAMER ZONE</string>
+    <string name="icono_de_juegos">Icono de juegos</string>
+    <string name="ver_juegos">VER JUEGOS</string>
+    <string name="icono_por_g_nero">Icono por género</string>
+    <string name="juegos_por_g_nero">JUEGOS POR CATEGORIA</string>
+    <string name="agregar_juego">AGREGAR JUEGO</string>
+    <string name="icono_agregar_juego">Icono agregar juego</string>
+    <string name="tvTitle">Lista de mis Juegos</string>
+    <string name="imagen_juego">logo_juego</string>
+    <string name="imagen_del_juego">Imagen del juego</string>
+    <string name="textDetalle">Detalle del Juego</string>
+    <string name="imgLogo">logo</string>
+    <string name="tvTittle">Regístrate</string>
+    <string name="edtName">Nombre de Usuario</string>
+    <string name="edtPhone">Numero de Telefono</string>
+    <string name="edtMail">Correo Electrónico</string>
+    <string name="checkbox">Acepta nuestras Politicas de Privacidad y Terminos de Uso</string>
+    <string name="btnNext">REGISTRAR</string>
+    <string name="tvHave">¿Ya tienes una cuenta? <font color="#1F8EF1"><b>Ingresa</b></font></string>
+</resources>

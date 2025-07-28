@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_inicio"
+        android:title="@string/nav_inicio"
+        android:icon="@drawable/inicio" />
+
+    <item
+        android:id="@+id/nav_juegos"
+        android:title="@string/nav_juegos"
+        android:icon="@drawable/juego" />
+
+    <item
+        android:id="@+id/nav_categoria"
+        android:title="@string/nav_categoria"
+        android:icon="@drawable/categ" />
+
+    <item
+        android:id="@+id/nav_nuevojuego"
+        android:title="@string/nav_nuevojuego"
+        android:icon="@drawable/newjuego" />
+
+    <item
+        android:id="@+id/nav_close"
+        android:title="@string/nav_close"
+        android:icon="@drawable/power" />
+</menu>

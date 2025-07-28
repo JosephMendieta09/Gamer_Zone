@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- Barra de herramientas personalizada -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarDetalle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/primary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleTextColor="@color/white" />
+
+    <!-- Contenido scrollable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <!-- CONTENIDO DEL JUEGO -->
+            <TextView
+                android:id="@+id/textDetalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textDetalle"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/textSecondary"
+                android:fontFamily="@font/comic"/>
+
+            <ImageView
+                android:id="@+id/imgJuegoDetalle"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="@string/imagen_del_juego"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:id="@+id/txtNombreDetalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:fontFamily="@font/toasty"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/txtGeneroDetalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/robotoblack"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/txtPlataforma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textSecondary"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/robotoblack"
+                android:textAlignment="center"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/txtAnho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textSecondary"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/robotoblack"
+                android:textAlignment="center"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/txtDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/robotoblack"
+                android:textAlignment="center"
+                android:textSize="20sp"/>
+
+            <RatingBar
+                android:id="@+id/ratingDetalle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:progressTint="@color/secondary"
+                android:secondaryProgressTint="@color/secondary"
+                android:backgroundTint="@color/colorGray"
+                android:numStars="5"
+                android:stepSize="0.1"
+                android:isIndicator="true"
+                android:layout_marginBottom="8dp"
+                style="@style/Widget.AppCompat.RatingBar.Indicator" />
+
+            <TextView
+                android:id="@+id/txtResena"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textSecondary"
+                android:textStyle="italic"
+                android:fontFamily="@font/robotoblack"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
