@@ -26,7 +26,7 @@ import java.util.Objects;
 
 public class InicioActivity extends AppCompatActivity {
 
-    CardView cardjuego;
+    CardView cardjuego, cardgenero, cardagregar;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
@@ -71,6 +71,8 @@ public class InicioActivity extends AppCompatActivity {
                     startActivity(jugar);
                     Toast.makeText(InicioActivity.this, "Estoy en juegos", Toast.LENGTH_LONG).show();
                 } else if (id == R.id.nav_categoria){
+                    Intent jugar = new Intent(InicioActivity.this, GenerosActivity.class);
+                    startActivity(jugar);
                     Toast.makeText(InicioActivity.this, "Estoy en Categorias", Toast.LENGTH_LONG).show();
                 } else if (id == R.id.nav_nuevojuego){
                     Toast.makeText(InicioActivity.this, "Estoy en Nuevo Juego", Toast.LENGTH_LONG).show();
@@ -88,6 +90,15 @@ public class InicioActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent jugando = new Intent(InicioActivity.this, JuegosActivity.class);
                 startActivity(jugando);
+            }
+        });
+
+        cardgenero = findViewById(R.id.cardgenero);
+        cardgenero.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gener = new Intent(InicioActivity.this, GenerosActivity.class);
+                startActivity(gener);
             }
         });
     }

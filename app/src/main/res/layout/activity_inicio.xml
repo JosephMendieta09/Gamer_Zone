@@ -88,7 +88,7 @@
             android:layout_marginStart="23dp"
             android:layout_marginEnd="23dp"
             app:cardCornerRadius="30dp"
-            app:cardBackgroundColor="@color/colorGray"
+            app:cardBackgroundColor="@color/colorOne"
             android:clickable="true"
             android:focusable="true">
 

@@ -35,7 +35,7 @@
             android:fontFamily="@font/comic"
             android:textStyle="bold"
             android:textSize="50sp"
-            android:textColor="@color/secondary"
+            android:textColor="@color/primary"
             android:text="@string/tvTitulo" />
 
         <TextView

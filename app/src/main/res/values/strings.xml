@@ -42,4 +42,7 @@
     <string name="checkbox">Acepta nuestras Politicas de Privacidad y Terminos de Uso</string>
     <string name="btnNext">REGISTRAR</string>
     <string name="tvHave">¿Ya tienes una cuenta? <font color="#1F8EF1"><b>Ingresa</b></font></string>
+    <string name="tvTitle2">Categorias</string>
+    <string name="imghost">deadpool</string>
+    <string name="icono">Icono</string>
 </resources>
