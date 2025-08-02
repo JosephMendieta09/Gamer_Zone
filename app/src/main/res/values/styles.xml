@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CardStyle">
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">8dp</item>
+        <item name="cardBackgroundColor">@color/cardBackground</item>
+    </style>
+
+    <style name="TextInputLayoutStyle">
+        <item name="boxStrokeColor">@color/secondary</item>
+        <item name="hintTextColor">@color/secondary</item>
+    </style>
+
+    <style name="EditTextStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:background">@drawable/edt_form</item>
+    </style>
+
+</resources>

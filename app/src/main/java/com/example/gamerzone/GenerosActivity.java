@@ -32,6 +32,7 @@ public class GenerosActivity extends AppCompatActivity {
                 .setMessage("¿Estás seguro de que deseas cerrar sesión?")
                 .setPositiveButton("Aceptar", (dialog, which) -> {
                     Intent intent = new Intent(GenerosActivity.this, InicioSesionActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                     finish();
                 })
@@ -97,7 +98,9 @@ public class GenerosActivity extends AppCompatActivity {
                 } else if (id == R.id.nav_categoria){
                     Toast.makeText(GenerosActivity.this, "Estoy en Categorias", Toast.LENGTH_LONG).show();
                 } else if (id == R.id.nav_nuevojuego){
-                    Toast.makeText(GenerosActivity.this, "Estoy en Nuevo Juego", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(GenerosActivity.this, AgregarJuegoActivity.class);
+                    startActivity(intent);
+                    Toast.makeText(GenerosActivity.this, "Estoy en Agregar Juego", Toast.LENGTH_LONG).show();
                 } else if (id == R.id.nav_close){
                     mostrarCerrarSesion();
                     return true;

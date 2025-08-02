@@ -45,4 +45,20 @@
     <string name="tvTitle2">Categorias</string>
     <string name="imghost">deadpool</string>
     <string name="icono">Icono</string>
+    <string name="tv_titulo_principal">REGISTRAR NUEVO JUEGO</string>
+    <string name="tv_descripcion">Agrega tu juego rellenando los siguientes datos.</string>
+    <string name="info_juego">INFORMACIÓN DEL JUEGO</string>
+    <string name="hint_nombre">Nombre del Juego</string>
+    <string name="hint_genero">Selecciona una Categoria</string>
+    <string name="hint_anho">Año de Lanzamiento</string>
+    <string name="hint_plataforma">Selecciona la Plataforma</string>
+    <string name="hint_descripcion">Descripción del Juego</string>
+    <string name="cal_juego">TU CALIFICACIÓN DEL JUEGO</string>
+    <string name="hint_resena">Escribe tu Reseña del Juego</string>
+    <string name="hint_calificacion">Calificación (1.0 - 5.0)</string>
+    <string name="img_juego">AGREGA UNA IMAGEN DEL JUEGO</string>
+    <string name="imgNueva">Nueva</string>
+    <string name="btnCargar">CARGAR IMAGEN</string>
+    <string name="btnGuardar">REGISTRAR JUEGO</string>
+    <string name="img5">deadpool</string>
 </resources>

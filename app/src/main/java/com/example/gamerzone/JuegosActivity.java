@@ -40,6 +40,7 @@ public class JuegosActivity extends AppCompatActivity {
                 .setMessage("¿Estás seguro de que deseas cerrar sesión?")
                 .setPositiveButton("Aceptar", (dialog, which) -> {
                     Intent intent = new Intent(JuegosActivity.this, InicioSesionActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                     finish();
                 })
@@ -78,7 +79,9 @@ public class JuegosActivity extends AppCompatActivity {
                     startActivity(intent);
                     Toast.makeText(JuegosActivity.this, "Estoy en Categorias", Toast.LENGTH_LONG).show();
                 } else if (id == R.id.nav_nuevojuego) {
-                    Toast.makeText(JuegosActivity.this, "Estoy en Nuevo Juego", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(JuegosActivity.this, AgregarJuegoActivity.class);
+                    startActivity(intent);
+                    Toast.makeText(JuegosActivity.this, "Estoy en Agregar Juego", Toast.LENGTH_LONG).show();
                 } else if (id == R.id.nav_close) {
                     mostrarCerrarSesion();
                     return true;
@@ -93,25 +96,52 @@ public class JuegosActivity extends AppCompatActivity {
         recyclerJuego = findViewById(R.id.RecyclerJuego);
         recyclerJuego.setLayoutManager(new LinearLayoutManager(this));
         Intent intent = getIntent();
-        String generoSeleccionado = intent.getStringExtra("genero");
-        List<Juego> juegosFiltrados = null;
-        if (generoSeleccionado != null && !generoSeleccionado.isEmpty()) {
-            juegosFiltrados = new ArrayList<>();
-            for (Juego j : listaCompleta) {
-                if (j.getGenero().equalsIgnoreCase(generoSeleccionado)) {
-                    juegosFiltrados.add(j);
-                }
+        if (intent.hasExtra("nuevo_juego")) {
+            Bundle bundle = intent.getBundleExtra("nuevo_juego");
+            if (bundle != null) {
+                int imagenId = bundle.getInt("imagenId");
+                String nombre = bundle.getString("nombre");
+                String genero = bundle.getString("genero");
+                String anho = bundle.getString("anho");
+                String plataforma = bundle.getString("plataforma");
+                String descripcion = bundle.getString("descripcion");
+                float calificacion = bundle.getFloat("calificacion");
+                String resena = bundle.getString("resena");
+
+                // Creamos y añadimos el nuevo juego al principio
+                Juego nuevo = new Juego(imagenId, nombre, genero, anho, plataforma, descripcion, calificacion, resena);
+                MisJuegos.insertarJuego(nuevo);
+
+                Toast.makeText(this, "¡Juego registrado con éxito!", Toast.LENGTH_SHORT).show();
             }
-            if (txtTituloGenero != null) {
-                txtTituloGenero.setText("Género: " + generoSeleccionado);
-            }
-            juegoAdapter = new JuegoAdapter(juegosFiltrados, this);
-        } else {
-            if (txtTituloGenero != null) {
-                txtTituloGenero.setText("Todos los Juegos");
-            }
-            juegoAdapter = new JuegoAdapter(listaCompleta, this);
         }
+        String generoSeleccionado = intent.getStringExtra("genero");
+        List<Juego> juegosAMostrar = obtenerListaFiltrada(generoSeleccionado);
+
+        if (txtTituloGenero != null) {
+            txtTituloGenero.setText(
+                    (generoSeleccionado != null && !generoSeleccionado.isEmpty())
+                            ? "Género: " + generoSeleccionado
+                            : "Todos los Juegos"
+            );
+        }
+
+        juegoAdapter = new JuegoAdapter(juegosAMostrar, this);
         recyclerJuego.setAdapter(juegoAdapter);
+    }
+
+    private List<Juego> obtenerListaFiltrada(String genero) {
+        if (genero == null || genero.isEmpty()) {
+            return MisJuegos.lista();
+        }
+
+        List<Juego> filtrados = new ArrayList<>();
+        for (Juego juego : MisJuegos.lista()) {
+            if (juego.getGenero().equalsIgnoreCase(genero)) {
+                filtrados.add(juego);
+            }
+        }
+
+        return filtrados;
     }
 }

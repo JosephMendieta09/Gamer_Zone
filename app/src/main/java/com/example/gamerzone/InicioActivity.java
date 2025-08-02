@@ -37,6 +37,7 @@ public class InicioActivity extends AppCompatActivity {
                 .setMessage("¿Estás seguro de que deseas cerrar sesión?")
                 .setPositiveButton("Aceptar", (dialog, which) -> {
                     Intent intent = new Intent(InicioActivity.this, InicioSesionActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                     finish();
                 })
@@ -75,7 +76,9 @@ public class InicioActivity extends AppCompatActivity {
                     startActivity(jugar);
                     Toast.makeText(InicioActivity.this, "Estoy en Categorias", Toast.LENGTH_LONG).show();
                 } else if (id == R.id.nav_nuevojuego){
-                    Toast.makeText(InicioActivity.this, "Estoy en Nuevo Juego", Toast.LENGTH_LONG).show();
+                    Intent jugar = new Intent(InicioActivity.this, AgregarJuegoActivity.class);
+                    startActivity(jugar);
+                    Toast.makeText(InicioActivity.this, "Estoy en Agregar Juego", Toast.LENGTH_LONG).show();
                 } else if (id == R.id.nav_close){
                     mostrarCerrarSesion();
                     return true;
@@ -99,6 +102,15 @@ public class InicioActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent gener = new Intent(InicioActivity.this, GenerosActivity.class);
                 startActivity(gener);
+            }
+        });
+
+        cardagregar = findViewById(R.id.cardagregar);
+        cardagregar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent agregar = new Intent(InicioActivity.this, AgregarJuegoActivity.class);
+                startActivity(agregar);
             }
         });
     }

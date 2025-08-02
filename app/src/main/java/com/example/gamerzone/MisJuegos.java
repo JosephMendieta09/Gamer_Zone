@@ -52,8 +52,7 @@ public class MisJuegos {
         return listaJuegos;
     }
 
-    public static void agregarJuegoPrimero(Juego juego) {
-        if (listaJuegos == null) lista();
+    public static void insertarJuego(Juego juego) {
         listaJuegos.add(0, juego);
     }
 }

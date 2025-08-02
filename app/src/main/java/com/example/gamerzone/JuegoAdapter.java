@@ -42,6 +42,11 @@ public class JuegoAdapter extends RecyclerView.Adapter<JuegoAdapter.JuegoViewHol
         return listaJuegos.size();
     }
 
+    public void agregarJuegoAlInicio(Juego juego) {
+        listaJuegos.add(0, juego);
+        notifyItemInserted(0);
+    }
+
     public class JuegoViewHolder extends RecyclerView.ViewHolder {
         TextView txtnombre, txtgenero;
         ImageView imageJuego;
